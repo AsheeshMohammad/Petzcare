@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Paw print background -->
+  <g transform="translate(15, 10)">
+    <!-- Main paw pad -->
+    <ellipse cx="25" cy="45" rx="15" ry="20" fill="#ffd700"/>
+    <!-- Toe pads -->
+    <circle cx="12" cy="20" r="7" fill="#ffd700"/>
+    <circle cx="25" cy="15" r="7" fill="#ffd700"/>
+    <circle cx="38" cy="20" r="7" fill="#ffd700"/>
+    <circle cx="45" cy="30" r="6" fill="#ffd700"/>
+  </g>
+</svg>
