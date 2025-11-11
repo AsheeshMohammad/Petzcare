@@ -1,6 +1,5 @@
 import { Box, Typography, Container } from '@mui/material';
 import logo3 from '../assets/images/logo3.png';
-import PawBackground from '../assets/PawBackground.svg';
 
 const features = [
   'Experienced Veterinarians With Advanced Training',
@@ -55,10 +54,10 @@ const WhyChooseSection = () => {
             <Box sx={{
               position: 'absolute',
               top: -10,
-              left: -30,
-              width: 80,
-              height: 80,
-              backgroundImage: `url(${PawBackground})`,
+              left: { xs: -10, md: -30 },
+              width: { xs: 60, md: 80 },
+              height: { xs: 60, md: 80 },
+              backgroundImage: 'url(/PawBackground.svg)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
               zIndex: 0

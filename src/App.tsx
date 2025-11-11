@@ -1,9 +1,8 @@
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import WhyChooseSection from './components/WhyChooseSection';
-import FAQSection from './components/FAQSection';
+import Home from './components/Home';
+import ComingSoon from './components/ComingSoon';
 import Footer from './components/Footer';
 
 const theme = createTheme({
@@ -18,12 +17,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <FAQSection />
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<ComingSoon />} />
+        </Routes>
+        <Footer />
+      </Router>
     </ThemeProvider>
   );
 }

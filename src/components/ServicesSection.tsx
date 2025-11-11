@@ -39,10 +39,10 @@ const ServicesSection = () => {
             <Box key={index} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3, justifyContent: 'center' }}>
               <Box sx={{
                 width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
               }}>{service.icon}</Box>
               <Box sx={{ width: '220px' }}>
-                <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>{service.title}</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>{service.title}</Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.4, fontSize: '12px' }}>
                   {service.description}
                 </Typography>
@@ -54,27 +54,27 @@ const ServicesSection = () => {
         {/* Desktop: Positioned layout */}
         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
           {/* Top Left - Health Examinations */}
-          <Box sx={{ position: 'absolute', top: 80, left: 120, display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Box sx={{ textAlign: 'right', width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Health Examinations</Typography>
+          <Box sx={{ position: 'absolute', top: 60, left: 180, display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box sx={{ textAlign: 'right', width: '180px' }}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Health Examinations</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 Comprehensive wellness exams and preventive care to detect health issues early
               </Typography>
             </Box>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>🔍</Box>
           </Box>
           
           {/* Top Right - Surgical Services */}
-          <Box sx={{ position: 'absolute', top: 80, right: 120, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box sx={{ position: 'absolute', top: 60, right: 180, display: 'flex', alignItems: 'center', gap: 1 }}>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>🎓</Box>
             <Box sx={{ width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Surgical Services</Typography>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Surgical Services</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 Advanced surgical procedures performed by skilled veterinarians using modern equipment
               </Typography>
@@ -82,27 +82,27 @@ const ServicesSection = () => {
           </Box>
           
           {/* Middle Left - Diagnostic Testing */}
-          <Box sx={{ position: 'absolute', top: '45%', left: 80, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box sx={{ position: 'absolute', top: '45%', left: 140, display: 'flex', alignItems: 'center', gap: 1 }}>
             <Box sx={{ textAlign: 'right', width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Diagnostic Testing</Typography>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Diagnostic Testing</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 State-of-the-art laboratory services and imaging to accurately diagnose conditions
               </Typography>
             </Box>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>📊</Box>
           </Box>
           
           {/* Middle Right - Emergency Care */}
-          <Box sx={{ position: 'absolute', top: '45%', right: 80, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box sx={{ position: 'absolute', top: '45%', right: 140, display: 'flex', alignItems: 'center', gap: 1 }}>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>⚙️</Box>
             <Box sx={{ width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Emergency Care</Typography>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Emergency Care</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 24/7 emergency services for urgent medical situations when pets need immediate attention
               </Typography>
@@ -110,27 +110,27 @@ const ServicesSection = () => {
           </Box>
           
           {/* Bottom Left - Vaccination Programs */}
-          <Box sx={{ position: 'absolute', bottom: 80, left: 120, display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Box sx={{ textAlign: 'right', width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Vaccination Programs</Typography>
+          <Box sx={{ position: 'absolute', bottom: 60, left: 180, display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box sx={{ textAlign: 'right', width: '180px' }}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Vaccination Programs</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 Complete immunization schedules to protect pets from common diseases
               </Typography>
             </Box>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>📚</Box>
           </Box>
           
           {/* Bottom Right - Dental Care */}
-          <Box sx={{ position: 'absolute', bottom: 80, right: 120, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box sx={{ position: 'absolute', bottom: 60, right: 180, display: 'flex', alignItems: 'center', gap: 1 }}>
             <Box sx={{
               width: 50, height: 50, borderRadius: '50%', backgroundColor: '#ffd700',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem'
             }}>📈</Box>
             <Box sx={{ width: '140px' }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '14px' }}>Dental Care</Typography>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '16px', whiteSpace: 'nowrap' }}>Dental Care</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.3, fontSize: '11px' }}>
                 Professional dental cleanings and oral health treatments to prevent dental disease
               </Typography>

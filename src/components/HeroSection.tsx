@@ -1,7 +1,10 @@
 import { Box, Typography, Button, Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import logo1 from '../assets/images/logo1.png';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   return (
     <Box sx={{ 
       background: 'linear-gradient(135deg, #4a7c7c 0%, #2d5a5a 100%)',
@@ -42,14 +45,19 @@ const HeroSection = () => {
             }}>
               At PetzCare Clinic, we provide comprehensive veterinary services with state-of-the-art facilities and experienced veterinarians. From routine check-ups to emergency care, we're dedicated to keeping your furry family members healthy and happy.
             </Typography>
-            <Button variant="contained" size="large" sx={{ 
-              backgroundColor: '#2d5a5a', 
-              color: 'white',
-              px: { xs: 3, md: 4 },
-              py: 1.5,
-              textTransform: 'none',
-              fontSize: { xs: '14px', md: '16px' }
-            }}>
+            <Button 
+              variant="contained" 
+              size="large" 
+              onClick={() => navigate('/book-appointment')}
+              sx={{ 
+                backgroundColor: '#2d5a5a', 
+                color: 'white',
+                px: { xs: 3, md: 4 },
+                py: 1.5,
+                textTransform: 'none',
+                fontSize: { xs: '14px', md: '16px' }
+              }}
+            >
               Book Appointment
             </Button>
           </Box>

@@ -1,7 +1,6 @@
 import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
 import logo2 from '../assets/images/logo2.png';
-import PawBackground from '../assets/PawBackground.svg';
 
 const faqs = [
   {
@@ -54,10 +53,10 @@ const FAQSection = () => {
             <Box sx={{
               position: 'absolute',
               top: -10,
-              left: -30,
-              width: 80,
-              height: 80,
-              backgroundImage: `url(${PawBackground})`,
+              left: { xs: -10, md: -30 },
+              width: { xs: 60, md: 80 },
+              height: { xs: 60, md: 80 },
+              backgroundImage: 'url(/PawBackground.svg)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
               zIndex: 0

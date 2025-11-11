@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, Box, Button, Typography, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PetzCareLogo from '../assets/PetzCareLogo.svg';
 import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import EmailIcon from '../assets/icons/EmailIcon.svg';
@@ -9,8 +10,17 @@ import SearchIcon from '../assets/icons/SearchIcon.svg';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
   
   const menuItems = ['Home', 'About Us', 'Blog', 'Services', 'Pages', 'Contact'];
+  
+  const handleNavigation = (item: string) => {
+    if (item === 'Home') {
+      navigate('/');
+    } else {
+      navigate(`/${item.toLowerCase().replace(' ', '-')}`);
+    }
+  };
   
   const scrollToFooter = () => {
     const footer = document.querySelector('footer');
@@ -30,12 +40,15 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>Home</Button>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>About Us</Button>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>Blog</Button>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>Services</Button>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>Pages</Button>
-            <Button sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}>Contact</Button>
+            {menuItems.map((item) => (
+              <Button 
+                key={item}
+                sx={{ color: 'white', textTransform: 'none', fontSize: '16px' }}
+                onClick={() => handleNavigation(item)}
+              >
+                {item}
+              </Button>
+            ))}
           </Box>
           
           {/* Desktop Social Icons */}
@@ -65,7 +78,7 @@ const Header = () => {
         <Box sx={{ width: 250, pt: 2 }}>
           <List>
             {menuItems.map((item) => (
-              <ListItem button key={item} onClick={() => setMobileOpen(false)}>
+              <ListItem button key={item} onClick={() => { handleNavigation(item); setMobileOpen(false); }}>
                 <ListItemText primary={item} />
               </ListItem>
             ))}
